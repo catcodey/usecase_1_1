@@ -1,4 +1,5 @@
 import sys
+import os
 import pathlib
 import streamlit as st
 from src.generate import TranscriptAI
