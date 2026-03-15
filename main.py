@@ -6,7 +6,7 @@ from src.extractor import extract_data
 from src.clean import clean_text
 from src.chunking import get_overlapping_chunks
 from ui.layout import render_input_section, render_chat_section
-
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # --- CONFIGURATION ---
 PROJECT_ID = "transcript-summarizer-490013"
 LOCATION = "asia-southeast1"
