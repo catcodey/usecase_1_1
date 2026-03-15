@@ -15,8 +15,7 @@ st.set_page_config(page_title="AI Transcript Analyser", layout="wide")
 
 # Initialize State
 if "ai_engine" not in st.session_state:
-    creds = st.secrets.get("gcp_service_account")
-    st.session_state.ai_engine = TranscriptAI(PROJECT_ID, LOCATION, creds)
+    st.session_state.ai_engine = TranscriptAI(PROJECT_ID, LOCATION)
 if "chat_session" not in st.session_state:
     st.session_state.chat_session = st.session_state.ai_engine.start_new_chat()
 if "messages" not in st.session_state: st.session_state.messages = []
